@@ -1,0 +1,368 @@
+$p-font-sizes: (null: 5.5rem,
+    320px: 5rem,
+    480px: 6rem,
+    640px: 8rem,
+    1024px: 10.5rem,
+);
+
+@mixin font-size($fs-map) {
+
+    @each $fs-breakpoint,
+    $fs-font-size in $fs-map {
+        @if $fs-breakpoint==null {
+            font-size: $fs-font-size;
+        }
+
+        @else {
+            @media screen and (min-width: $fs-breakpoint) {
+                font-size: $fs-font-size;
+            }
+        }
+    }
+}
+
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 3rem;
+$text: 2.5rem;
+$gradient: linear-gradient(to left, #38d39f, #38a4d3);
+$background-color: #154353;
+$gray-text: #2c2c2c;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    animation: opening 1s ease-in-out;
+    font-family: "Sen", sans-serif;
+}
+
+h1 {
+    font-size: $header1;
+}
+
+li,
+button,
+label,
+input,
+p,
+a {
+    font-size: $text;
+}
+
+h2 {
+    font-size: $header2;
+}
+
+h3 {
+    font-size: $header3;
+}
+
+h4,
+h5 {
+    font-size: $header4;
+}
+
+a {
+    text-decoration: none;
+    color: $gray-text;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+/* ---------NAV MENU ------------------*/
+
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.main-header.add {
+    background: white;
+    animation: fadein 0.5s ease-in-out;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+nav {
+    display: flex;
+    position: relative;
+    min-height: 10vh;
+    padding: 2rem 0rem;
+    align-items: center;
+}
+
+#logo {
+    font-family: "Pacifico", cursive;
+    margin-left: 5%;
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+.burger {
+    position: absolute;
+    display: block;
+    right: 0;
+    cursor: pointer;
+    margin-right: 5%;
+    z-index: 3;
+}
+
+.burger span {
+    background: $gray-text;
+    display: block;
+    padding: 0.2rem 2rem;
+    margin: 0.5rem 0rem;
+}
+
+.whiteburger {
+    background: white !important;
+}
+
+.nav-links {
+    position: fixed;
+    background: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    clip-path: circle(100px at 100% -30%);
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-wrapper {
+    min-height: 60vh;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 20rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li {
+        a {
+            color: white;
+        }
+    }
+}
+
+.fa {
+    padding: 1.5rem;
+}
+
+.other-info {
+    flex: 1 1 20rem;
+    text-align: right;
+
+    ul {
+        li {
+            a {
+                color: white;
+                line-height: 1.8;
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+.whatsapp {
+    margin-bottom: 6rem;
+
+    a {
+        color: white;
+        font-size: 4rem;
+    }
+
+    h2 {
+        color: white;
+        font-size: $text;
+        padding-top: 2rem;
+
+    }
+}
+
+.nav-links.open {
+    clip-path: circle(2000px at 90% -20%);
+    pointer-events: all;
+
+}
+
+/*----- NAV ANIMATION ------------*/
+
+.line {
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+}
+
+.icons.close .top {
+    transform: rotateZ(45deg) translateY(150%);
+
+}
+
+.icons.close .middle {
+    display: none;
+}
+
+.icons.close .bottom {
+    transform: rotateZ(-45deg) translateY(-150%);
+
+}
+
+
+/* -----------OTHER CSS ------------------*/
+
+.intro {
+    display: flex;
+    height: 100vh;
+    width: 95%;
+    margin: 0 0 0 auto;
+}
+
+.text-intro {
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: $header2;
+        color: rgb(28, 30, 53);
+    }
+}
+
+.img-intro {
+    flex: 1 1 40rem;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: top;
+        background-size: cover;
+    }
+}
+
+.text-intro h2 {
+    @include font-size($p-font-sizes);
+    font-weight: 800;
+}
+
+.text-intro h4 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 6rem;
+}
+
+#greeting {
+    font-weight: 600;
+}
+
+
+/* ----------------MOBILE RESPONSIVENESS --------------------*/
+
+@media screen and (max-width: 1094px) {
+    .img-intro {
+        display: none;
+    }
+
+    .intro {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(100, 47, 47, 0)), url(./man.jpg);
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        margin: auto;
+        width: 100%;
+    }
+
+    .text-intro {
+        margin-left: 5rem;
+        color: white;
+
+        h2 {
+            color: white;
+        }
+    }
+
+    .whatsapp {
+        a {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 432px) {
+    .text-intro h4 {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 748px) {
+    .whatsapp {
+        a {
+            font-size: 2.6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 606px) {
+    .socials {
+        flex-direction: row;
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .socials {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .other-info {
+        text-align: left;
+        margin-top: 3rem;
+    }
+
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hendrickz is a frontend web developer" />
+    <meta name="robots" content="index,follow" />
+    <title>Hendrickz | Software developer</title>
+    <link rel="icon" href="./img/vision.svg" />
+    <script src="https://use.fontawesome.com/4c49d636d1.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="http://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <nav>
+        <div id="logo">
+          <h1>Hendrickz.</h1>
+        </div>
+        <div class="burger">
+          <div class="icons">
+            <span class="line top"></span>
+            <span class="line middle"></span>
+            <span class="line bottom"></span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <div class="nav-wrapper">
+            <ul class="socials">
+              <li class="social-links">
+                <a href="#"
+                  ><span class="fa fa-facebook-official"></span>Facebook</a
+                >
+              </li class="social-links">
+              <li>
+                <a href="#"><span class="fa fa-twitter"></span>Twitter</a>
+              </li>
+              <li class="social-links">
+                <a href="#"><span class="fa fa-dribbble"></span>Dribbble</a>
+              </li>
+              <li class="social-links">
+                <a href="#"><span class="fa fa-instagram"></span>Instagram</a>
+              </li>
+              <li class="social-links">
+                <a href="#"><span class="fa fa-skype"></span>Skype</a>
+              </li>
+              <li class="social-links">
+                <a href="#"><span class="fa fa-behance"></span>Behance</a>
+              </li>
+              <li class="social-links">
+                <a href="#"><span class="fa fa-linkedin"></span>LinkedIn</a>
+              </li>
+            </ul>
+            <div class="other-info">
+              <div class="whatsapp">
+                <a href="#"
+                  ><span class="fa fa-whatsapp"></span><br />(+00) 000
+                  000-2222</a
+                >
+                <h2>contact@hendrickz.com</h2>
+              </div>
+              <ul>
+                <li><a href="#">My process</a></li>
+                <li><a href="#">My work</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="intro">
+      <div class="text-intro">
+        <h2>
+          <span id="greeting">Hey!</span> <br />
+          I'm Henry
+        </h2>
+        <h4>I CREATE AWESOME SOFTWARES</h4>
+      </div>
+      <div class="img-intro">
+        <img src="./img/man.jpg" alt="Henry" />
+      </div>
+    </section>
+
+    <script>
+      const hamburger = document.querySelector(".burger");
+      const navLinks = document.querySelector(".nav-links");
+      const links = document.querySelectorAll(".nav-links li");
+      const lines = document.querySelectorAll(".burger span");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+        lines.forEach((line) => {
+          line.classList.toggle("whiteburger");
+        });
+      });
+    </script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

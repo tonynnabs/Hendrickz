@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-animation: opening 1s ease-in-out;
+          animation: opening 1s ease-in-out;
+  font-family: "Sen", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+li,
+button,
+label,
+input,
+p,
+a {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4,
+h5 {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------NAV MENU ------------------*/
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.main-header.add {
+  background: white;
+  -webkit-animation: fadein 0.5s ease-in-out;
+          animation: fadein 0.5s ease-in-out;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-height: 10vh;
+  padding: 2rem 0rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#logo {
+  font-family: "Pacifico", cursive;
+  margin-left: 5%;
+}
+
+#logo h1 {
+  font-size: 3rem;
+}
+
+.burger {
+  position: absolute;
+  display: block;
+  right: 0;
+  cursor: pointer;
+  margin-right: 5%;
+  z-index: 3;
+}
+
+.burger span {
+  background: #2c2c2c;
+  display: block;
+  padding: 0.2rem 2rem;
+  margin: 0.5rem 0rem;
+}
+
+.whiteburger {
+  background: white !important;
+}
+
+.nav-links {
+  position: fixed;
+  background: black;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: circle(100px at 100% -30%);
+          clip-path: circle(100px at 100% -30%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-wrapper {
+  min-height: 60vh;
+  width: 70%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.socials li a {
+  color: white;
+}
+
+.fa {
+  padding: 1.5rem;
+}
+
+.other-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+  text-align: right;
+}
+
+.other-info ul li a {
+  color: white;
+  line-height: 1.8;
+  font-size: 3rem;
+}
+
+.whatsapp {
+  margin-bottom: 6rem;
+}
+
+.whatsapp a {
+  color: white;
+  font-size: 4rem;
+}
+
+.whatsapp h2 {
+  color: white;
+  font-size: 2.5rem;
+  padding-top: 2rem;
+}
+
+.nav-links.open {
+  -webkit-clip-path: circle(2000px at 90% -20%);
+          clip-path: circle(2000px at 90% -20%);
+  pointer-events: all;
+}
+
+/*----- NAV ANIMATION ------------*/
+.line {
+  -webkit-transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+  transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+}
+
+.icons.close .top {
+  -webkit-transform: rotateZ(45deg) translateY(150%);
+          transform: rotateZ(45deg) translateY(150%);
+}
+
+.icons.close .middle {
+  display: none;
+}
+
+.icons.close .bottom {
+  -webkit-transform: rotateZ(-45deg) translateY(-150%);
+          transform: rotateZ(-45deg) translateY(-150%);
+}
+
+/* -----------OTHER CSS ------------------*/
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+
+.text-intro {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text-intro h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  color: #1c1e35;
+}
+
+.img-intro {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-intro img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: top;
+  background-size: cover;
+}
+
+.text-intro h2 {
+  font-size: 5.5rem;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 320px) {
+  .text-intro h2 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .text-intro h2 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .text-intro h2 {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .text-intro h2 {
+    font-size: 10.5rem;
+  }
+}
+
+.text-intro h4 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 6rem;
+}
+
+#greeting {
+  font-weight: 600;
+}
+
+/* ----------------MOBILE RESPONSIVENESS --------------------*/
+@media screen and (max-width: 1094px) {
+  .img-intro {
+    display: none;
+  }
+  .intro {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(100, 47, 47, 0))), url(./man.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(100, 47, 47, 0)), url(./man.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    width: 100%;
+  }
+  .text-intro {
+    margin-left: 5rem;
+    color: white;
+  }
+  .text-intro h2 {
+    color: white;
+  }
+  .whatsapp a {
+    font-size: 3rem;
+  }
+  .whatsapp h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 432px) {
+  .text-intro h4 {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 748px) {
+  .whatsapp a {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 606px) {
+  .socials {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .socials {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 2rem;
+  }
+  .other-info {
+    text-align: left;
+    margin-top: 3rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
