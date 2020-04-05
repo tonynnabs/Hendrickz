@@ -335,8 +335,8 @@ nav {
     display: none;
   }
   .intro {
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(100, 47, 47, 0))), url(./man.jpg);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(100, 47, 47, 0)), url(./man.jpg);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(100, 47, 47, 0))), url(./img/man.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(100, 47, 47, 0)), url(./img/man.jpg);
     min-height: 100vh;
     background-size: cover;
     background-position: center;
