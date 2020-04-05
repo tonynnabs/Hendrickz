@@ -357,12 +357,31 @@ nav {
 @media screen and (max-width: 476px) {
     .socials {
         flex-direction: column;
-        margin-top: 2rem;
+        margin-top: 0.2rem;
+
+        li {
+            a {
+                font-size: 1.6rem;
+            }
+        }
     }
 
     .other-info {
         text-align: left;
         margin-top: 3rem;
+
+        ul li a {
+            font-size: 1.8rem;
+        }
+
+    }
+
+    .whatsapp {
+        margin-bottom: 2rem;
+
+        a {
+            font-size: 2rem;
+        }
     }
 
 }

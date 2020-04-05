@@ -386,11 +386,23 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 0.2rem;
+  }
+  .socials li a {
+    font-size: 1.6rem;
   }
   .other-info {
     text-align: left;
     margin-top: 3rem;
+  }
+  .other-info ul li a {
+    font-size: 1.8rem;
+  }
+  .whatsapp {
+    margin-bottom: 2rem;
+  }
+  .whatsapp a {
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
