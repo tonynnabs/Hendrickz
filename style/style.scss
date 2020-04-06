@@ -176,12 +176,28 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
 
+    .link1,
+    .link2,
+    .link3,
+    .link4,
+    .link5,
+    .link6,
+    .link7 {
+        opacity: 0;
+    }
+
     li {
+
         a {
             color: white;
         }
     }
 }
+
+.link2 {
+    opacity: 0;
+}
+
 
 .fa {
     padding: 1.5rem;
@@ -218,9 +234,45 @@ nav {
     }
 }
 
+
+
 .nav-links.open {
     clip-path: circle(2000px at 90% -20%);
     pointer-events: all;
+
+    .socials {
+        .link1 {
+            animation: navMenuSlide 1s ease-in-out 0.1s forwards;
+        }
+
+        .link2 {
+            animation: navMenuSlide 1s ease-in-out 0.2s forwards;
+        }
+
+        .link3 {
+            animation: navMenuSlide 1s ease-in-out 0.3s forwards;
+        }
+
+        .link4 {
+            animation: navMenuSlide 1s ease-in-out 0.4s forwards;
+        }
+
+        .link5 {
+            animation: navMenuSlide 1s ease-in-out 0.5s forwards;
+        }
+
+        .link6 {
+            animation: navMenuSlide 1s ease-in-out 0.6s forwards;
+        }
+
+        .link7 {
+            animation: navMenuSlide 1s ease-in-out 0.7s forwards;
+        }
+    }
+
+    .other-info {
+        animation: navMenuSlide 1s ease-in-out 0.2s forwards;
+    }
 
 }
 
@@ -294,6 +346,19 @@ nav {
 
 #greeting {
     font-weight: 600;
+}
+
+/*---------------ANIMATIONS----------*/
+@keyframes navMenuSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-50px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px)
+    }
 }
 
 

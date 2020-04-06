@@ -44,27 +44,27 @@
         <div class="nav-links">
           <div class="nav-wrapper">
             <ul class="socials">
-              <li class="social-links">
+              <li class="social-links link1">
                 <a href="#"
                   ><span class="fa fa-facebook-official"></span>Facebook</a
                 >
-              </li class="social-links">
-              <li>
+              </li>
+              <li class="social-links link2">
                 <a href="#"><span class="fa fa-twitter"></span>Twitter</a>
               </li>
-              <li class="social-links">
+              <li class="social-links link3">
                 <a href="#"><span class="fa fa-dribbble"></span>Dribbble</a>
               </li>
-              <li class="social-links">
+              <li class="social-links link4">
                 <a href="#"><span class="fa fa-instagram"></span>Instagram</a>
               </li>
-              <li class="social-links">
+              <li class="social-links link5">
                 <a href="#"><span class="fa fa-skype"></span>Skype</a>
               </li>
-              <li class="social-links">
+              <li class="social-links link6">
                 <a href="#"><span class="fa fa-behance"></span>Behance</a>
               </li>
-              <li class="social-links">
+              <li class="social-links link7">
                 <a href="#"><span class="fa fa-linkedin"></span>LinkedIn</a>
               </li>
             </ul>
@@ -103,6 +103,7 @@
       const navLinks = document.querySelector(".nav-links");
       const links = document.querySelectorAll(".nav-links li");
       const lines = document.querySelectorAll(".burger span");
+      const socials = document.querySelectorAll(".socials li");
 
       hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("open");

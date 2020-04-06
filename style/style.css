@@ -179,8 +179,22 @@ nav {
       flex-wrap: wrap;
 }
 
+.socials .link1,
+.socials .link2,
+.socials .link3,
+.socials .link4,
+.socials .link5,
+.socials .link6,
+.socials .link7 {
+  opacity: 0;
+}
+
 .socials li a {
   color: white;
+}
+
+.link2 {
+  opacity: 0;
 }
 
 .fa {
@@ -219,6 +233,46 @@ nav {
   -webkit-clip-path: circle(2000px at 90% -20%);
           clip-path: circle(2000px at 90% -20%);
   pointer-events: all;
+}
+
+.nav-links.open .socials .link1 {
+  -webkit-animation: navMenuSlide 1s ease-in-out 0.1s forwards;
+          animation: navMenuSlide 1s ease-in-out 0.1s forwards;
+}
+
+.nav-links.open .socials .link2 {
+  -webkit-animation: navMenuSlide 1s ease-in-out 0.2s forwards;
+          animation: navMenuSlide 1s ease-in-out 0.2s forwards;
+}
+
+.nav-links.open .socials .link3 {
+  -webkit-animation: navMenuSlide 1s ease-in-out 0.3s forwards;
+          animation: navMenuSlide 1s ease-in-out 0.3s forwards;
+}
+
+.nav-links.open .socials .link4 {
+  -webkit-animation: navMenuSlide 1s ease-in-out 0.4s forwards;
+          animation: navMenuSlide 1s ease-in-out 0.4s forwards;
+}
+
+.nav-links.open .socials .link5 {
+  -webkit-animation: navMenuSlide 1s ease-in-out 0.5s forwards;
+          animation: navMenuSlide 1s ease-in-out 0.5s forwards;
+}
+
+.nav-links.open .socials .link6 {
+  -webkit-animation: navMenuSlide 1s ease-in-out 0.6s forwards;
+          animation: navMenuSlide 1s ease-in-out 0.6s forwards;
+}
+
+.nav-links.open .socials .link7 {
+  -webkit-animation: navMenuSlide 1s ease-in-out 0.7s forwards;
+          animation: navMenuSlide 1s ease-in-out 0.7s forwards;
+}
+
+.nav-links.open .other-info {
+  -webkit-animation: navMenuSlide 1s ease-in-out 0.2s forwards;
+          animation: navMenuSlide 1s ease-in-out 0.2s forwards;
 }
 
 /*----- NAV ANIMATION ------------*/
@@ -327,6 +381,32 @@ nav {
 
 #greeting {
   font-weight: 600;
+}
+
+/*---------------ANIMATIONS----------*/
+@-webkit-keyframes navMenuSlide {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes navMenuSlide {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 /* ----------------MOBILE RESPONSIVENESS --------------------*/
